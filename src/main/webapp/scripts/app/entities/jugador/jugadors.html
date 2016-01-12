@@ -1,0 +1,62 @@
+<div>
+    <h2>Jugadors</h2>
+    <jh-alert></jh-alert>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <button class="btn btn-primary" ui-sref="jugador.new">
+                    <span class="glyphicon glyphicon-flash"></span> <span>Create a new Jugador</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>FechaNacimiento</th>
+                    <th>CanastasTotales</th>
+                    <th>RebotesTotales</th>
+                    <th>AsistenciasTotales</th>
+                    <th>Posicion</th>
+                    <th>jugador</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="jugador in jugadors track by jugador.id">
+                    <td><a ui-sref="jugador.detail({id:jugador.id})">{{jugador.id}}</a></td>
+                    <td>{{jugador.nombre}}</td>
+                        <td>{{jugador.fechaNacimiento | date:'mediumDate'}}</td>
+                    <td>{{jugador.canastasTotales}}</td>
+                    <td>{{jugador.rebotesTotales}}</td>
+                    <td>{{jugador.asistenciasTotales}}</td>
+                    <td>{{jugador.posicion}}</td>
+                    <td>
+                        <a ui-sref="jugador.detail({id:jugador.jugador.id})">{{jugador.jugador.equipo}}</a>
+                    </td>
+                    <td>
+                        <button type="submit"
+                                ui-sref="jugador.detail({id:jugador.id})"
+                                class="btn btn-info btn-sm">
+                            <span class="glyphicon glyphicon-eye-open"></span>&nbsp;<span> View</span>
+                        </button>
+                        <button type="submit"
+                                ui-sref="jugador.edit({id:jugador.id})"
+                                class="btn btn-primary btn-sm">
+                            <span class="glyphicon glyphicon-pencil"></span>&nbsp;<span> Edit</span>
+                        </button>
+                        <button type="submit"
+                                ui-sref="jugador.delete({id:jugador.id})"
+                                class="btn btn-danger btn-sm">
+                            <span class="glyphicon glyphicon-remove-circle"></span>&nbsp;<span> Delete</span>
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

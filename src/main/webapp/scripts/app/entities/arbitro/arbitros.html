@@ -1,0 +1,48 @@
+<div>
+    <h2>Arbitros</h2>
+    <jh-alert></jh-alert>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <button class="btn btn-primary" ui-sref="arbitro.new">
+                    <span class="glyphicon glyphicon-flash"></span> <span>Create a new Arbitro</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="arbitro in arbitros track by arbitro.id">
+                    <td><a ui-sref="arbitro.detail({id:arbitro.id})">{{arbitro.id}}</a></td>
+                    <td>{{arbitro.nombre}}</td>
+                    <td>
+                        <button type="submit"
+                                ui-sref="arbitro.detail({id:arbitro.id})"
+                                class="btn btn-info btn-sm">
+                            <span class="glyphicon glyphicon-eye-open"></span>&nbsp;<span> View</span>
+                        </button>
+                        <button type="submit"
+                                ui-sref="arbitro.edit({id:arbitro.id})"
+                                class="btn btn-primary btn-sm">
+                            <span class="glyphicon glyphicon-pencil"></span>&nbsp;<span> Edit</span>
+                        </button>
+                        <button type="submit"
+                                ui-sref="arbitro.delete({id:arbitro.id})"
+                                class="btn btn-danger btn-sm">
+                            <span class="glyphicon glyphicon-remove-circle"></span>&nbsp;<span> Delete</span>
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

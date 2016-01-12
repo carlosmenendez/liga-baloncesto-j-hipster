@@ -1,0 +1,24 @@
+{
+  "generator-jhipster": {
+    "baseName": "LigaBaloncestoJHipster",
+    "packageName": "com.mycompany.myapp",
+    "packageFolder": "com/mycompany/myapp",
+    "authenticationType": "session",
+    "hibernateCache": "ehcache",
+    "clusteredHttpSession": "no",
+    "websocket": "no",
+    "databaseType": "sql",
+    "devDatabaseType": "mysql",
+    "prodDatabaseType": "mysql",
+    "searchEngine": "no",
+    "useSass": true,
+    "buildTool": "maven",
+    "frontendBuilder": "grunt",
+    "enableTranslation": false,
+    "enableSocialSignIn": false,
+    "rememberMeKey": "d2b5dcd86f2e2e1c7bc30fbd24625b4e7179300e",
+    "testFrameworks": [
+      "gatling"
+    ]
+  }
+}
