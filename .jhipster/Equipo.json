@@ -19,7 +19,7 @@
         },
         {
             "fieldId": 3,
-            "fieldName": "localité",
+            "fieldName": "localidad",
             "fieldType": "String"
         }
     ],
