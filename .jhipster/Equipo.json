@@ -9,7 +9,7 @@
     "fields": [
         {
             "fieldId": 1,
-            "fieldName": "nomre",
+            "fieldName": "nombre",
             "fieldType": "String"
         },
         {
